@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Endpoint Picker — click the text, see the API</title>
+    <meta name="description" content="A Chrome extension. Click a value on any page and see the request and JSON field that returned it." />
+    <meta property="og:title" content="Endpoint Picker" />
+    <meta property="og:description" content="Click the text. See the API." />
+    <meta property="og:image" content="https://ordas21.github.io/endpoint-picker/media/marquee.png" />
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #102027;
+        color: #e7eef0;
+        font: 18px/1.45 ui-sans-serif, system-ui, sans-serif;
+      }
+      a { color: #ffb199; }
+      a:focus-visible { outline: 2px solid #ff5a36; outline-offset: 3px; }
+      .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+      header.top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 0;
+      }
+      .brand { display: flex; gap: 10px; align-items: center; font-weight: 600; color: inherit; text-decoration: none; }
+      .hero { padding: 28px 0 12px; }
+      h1 {
+        margin: 0;
+        font-size: clamp(40px, 6vw, 72px);
+        line-height: 0.98;
+        letter-spacing: -0.03em;
+        font-weight: 600;
+        max-width: 12ch;
+      }
+      .deck { max-width: 38ch; color: #b7c9ce; font-size: 20px; margin: 18px 0 0; }
+      .actions { display: flex; gap: 18px; align-items: center; margin: 22px 0 8px; }
+      .button {
+        display: inline-block;
+        background: #ff5a36;
+        color: #1a0d09;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 14px;
+        border-radius: 2px;
+      }
+      figure { margin: 28px 0; }
+      img { display: block; width: 100%; height: auto; border: 1px solid #2a4652; }
+      figcaption { color: #8aa3ab; font-size: 14px; margin-top: 8px; }
+      .split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 12px 0 8px; }
+      h2 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.02em; }
+      .split p { margin: 0; color: #c5d5d9; }
+      ol { margin: 8px 0 0; padding-left: 20px; color: #c5d5d9; }
+      li { margin: 6px 0; }
+      footer { padding: 28px 0 48px; color: #8aa3ab; font-size: 14px; }
+      @media (max-width: 720px) {
+        .split { grid-template-columns: 1fr; }
+        .deck { font-size: 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="brand" href="./">
+          <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+            <path fill="#ff5a36" d="M2 2h12v3H5v9H2V2zm16 0h12v12h-3V5h-9V2zM2 18h3v9h9v3H2V18zm25 0h3v12H18v-3h9v-9zM13 13h6v6h-6z"/>
+          </svg>
+          Endpoint Picker
+        </a>
+        <a href="privacy.html">Privacy</a>
+      </header>
+      <section class="hero">
+        <h1>Click the text. See the API.</h1>
+        <p class="deck">A Chrome extension for the moment a value is on the screen and the Network panel is a wall of calls. Click it. The panel names the request and the JSON field.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/ordas21/endpoint-picker/releases/latest">Download</a>
+          <a href="https://github.com/ordas21/endpoint-picker">Source</a>
+        </div>
+      </section>
+      <figure>
+        <img src="media/hero.png" width="1280" height="800" alt="Endpoint Picker open on a payouts table. The panel shows GET /api/payouts.json and the path payouts[0].vendor for Mira Chen." />
+        <figcaption>Click a name. The path is payouts[0].vendor, from the request that returned it.</figcaption>
+      </figure>
+      <section class="split">
+        <div>
+          <h2>The field, not the whole payload.</h2>
+          <p>The first row is the exact value. Under it, any other response that also contains that text. Copy the endpoint, the path, or a curl command.</p>
+        </div>
+        <div>
+          <h2>Install</h2>
+          <ol>
+            <li>Download the zip and unzip it.</li>
+            <li>Open chrome://extensions and turn on Developer mode.</li>
+            <li>Choose Load unpacked and select the unzipped folder.</li>
+            <li>Reload the tab, then start inspecting.</li>
+          </ol>
+        </div>
+      </section>
+      <figure>
+        <img src="media/also.png" width="1280" height="800" alt="The word Scheduled is selected. The panel shows the exact status field and a second response that contains the same word." />
+        <figcaption>When two responses contain the same word, both are listed. The exact field comes first.</figcaption>
+      </figure>
+      <footer>
+        <p>Responses stay in the tab. They are not uploaded. <a href="privacy.html">Privacy</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

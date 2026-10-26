@@ -1,0 +1,18 @@
+{
+  "payouts": [
+    {
+      "id": "PO-1842",
+      "vendor": "Mira Chen",
+      "status": "Scheduled",
+      "account": "Mercury · 4419",
+      "amount": "$4,280.00"
+    },
+    {
+      "id": "PO-1843",
+      "vendor": "Ivo Marin",
+      "status": "Sent",
+      "account": "Wise · 2201",
+      "amount": "$860.00"
+    }
+  ]
+}

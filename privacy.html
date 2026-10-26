@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Endpoint Picker privacy</title>
+    <style>
+      :root { color-scheme: light; }
+      body {
+        margin: 0;
+        background: #f3f7f8;
+        color: #102027;
+        font: 17px/1.5 ui-sans-serif, system-ui, sans-serif;
+      }
+      header {
+        background: #102027;
+        color: #e7eef0;
+        padding: 20px 24px;
+      }
+      header a { color: #e7eef0; }
+      h1 { margin: 0; font-size: 20px; font-weight: 600; }
+      main { max-width: 68ch; margin: 0 auto; padding: 28px 24px 64px; }
+      h2 { font-size: 18px; margin: 28px 0 8px; }
+      p, li { margin: 0 0 10px; }
+      a { color: #9a3412; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Endpoint Picker privacy</h1>
+    </header>
+    <main>
+      <p>Last updated October 26, 2026.</p>
+      <p>Endpoint Picker is a Chrome extension. You click text on a page, and it shows the network response that contained that text. This page says what happens to that data.</p>
+
+      <h2>What it processes</h2>
+      <p>On pages where it runs, the extension reads the bodies of fetch, XHR, server-sent event, and text WebSocket messages so it can search them when you click. A match can include the URL, method, status, JSON path, a short snippet of the value, a request id header, and the script that started the call.</p>
+      <p>Those responses may contain whatever the site itself sent, including names, account details, or tokens. The extension does not ask for that. It sees it only because it was already on the page.</p>
+
+      <h2>Where it lives</h2>
+      <p>Matches stay in the memory of that tab. They are not uploaded, sold, or sent to the developer. Closing the tab, navigating away, or choosing Clear buffer drops them. Nothing is written to a server, an account, or an analytics tool.</p>
+
+      <h2>What it does not do</h2>
+      <ul>
+        <li>It does not send page contents off your computer.</li>
+        <li>It does not read passwords you type. Password fields are skipped.</li>
+        <li>It does not inject ads, and it does not run remote code.</li>
+        <li>It does not keep response bodies after the tab is gone.</li>
+      </ul>
+
+      <h2>Permissions</h2>
+      <p>The extension asks for access to sites you visit because it has to wrap fetch before the page loads, and you can inspect any site. That access is used for the inspect feature and for nothing else.</p>
+
+      <h2>Contact</h2>
+      <p>Questions and privacy requests go through <a href="https://github.com/ordas21/endpoint-picker/issues">GitHub issues</a>. The public copy of this policy is at <a href="https://ordas21.github.io/endpoint-picker/privacy.html">ordas21.github.io/endpoint-picker/privacy.html</a>.</p>
+    </main>
+  </body>
+</html>

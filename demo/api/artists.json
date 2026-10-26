@@ -1,0 +1,6 @@
+{
+  "artists": [
+    { "id": 18, "name": "Ada Lovelace", "city": "London" },
+    { "id": 19, "name": "Grace Hopper", "city": "New York" }
+  ]
+}

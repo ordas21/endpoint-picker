@@ -1,0 +1,118 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  width: 320px;
+  background: #102027;
+  color: #e7eef0;
+  font: 13px/1.45 ui-sans-serif, system-ui, sans-serif;
+}
+
+header {
+  padding: 14px 14px 0;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mark {
+  flex: none;
+}
+
+h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  margin: 6px 0 0;
+  color: #9eb4bb;
+}
+
+main {
+  padding: 14px;
+}
+
+button {
+  font: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.primary {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  background: #ff5a36;
+  color: #1a0d09;
+  font-weight: 600;
+  padding: 9px 12px;
+}
+
+.quiet {
+  width: 100%;
+  background: transparent;
+  color: #d5e4e8;
+  border: 1px solid #2a4652;
+  padding: 8px 12px;
+}
+
+.quiet:hover:not(:disabled) {
+  background: #17303a;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 14px 0 8px;
+  color: #9eb4bb;
+}
+
+.meta strong {
+  color: #e7eef0;
+  font-weight: 600;
+}
+
+.note {
+  margin: 12px 0 0;
+  color: #8aa3ab;
+  font-size: 12px;
+}
+
+.reason {
+  margin: 0 0 10px;
+  color: #ffb4a2;
+}
+
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: #e7eef0;
+}
+
+a {
+  color: #ffb199;
+}
+
+a:focus-visible {
+  outline: 2px solid #ff5a36;
+  outline-offset: 2px;
+}

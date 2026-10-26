@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Endpoint Picker demo</title>
+    <style>
+      body { font: 16px/1.45 ui-sans-serif, system-ui, sans-serif; margin: 40px; color: #172026; }
+      li { margin: 8px 0; }
+      .city { margin-left: 8px; color: #3d555c; }
+      .local { margin-top: 24px; }
+    </style>
+  </head>
+  <body>
+    <h1>Gallery</h1>
+    <ul id="list"></ul>
+    <p id="note"></p>
+    <p class="local">Printed locally</p>
+    <script>
+      async function load() {
+        const artists = await fetch('api/artists.json').then(function (res) { return res.json(); });
+        const note = await fetch('api/note.json').then(function (res) { return res.json(); });
+        const list = document.querySelector('#list');
+        artists.artists.forEach(function (artist) {
+          const item = document.createElement('li');
+          const name = document.createElement('span');
+          name.className = 'name';
+          name.textContent = artist.name;
+          const city = document.createElement('span');
+          city.className = 'city';
+          city.textContent = artist.city;
+          item.append(name, city);
+          list.append(item);
+        });
+        document.querySelector('#note').textContent = note.note;
+      }
+      load();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Harbor · Payouts</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #e7eef0; color: #102027; }
+      body { font: 15px/1.4 ui-sans-serif, system-ui, sans-serif; }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #102027;
+        color: #e7eef0;
+        padding: 22px 28px;
+        min-height: 72px;
+      }
+      .word { font-weight: 600; letter-spacing: -0.02em; }
+      .sub { color: #9eb4bb; }
+      main { padding: 48px 40px 0; }
+      h1 { margin: 0; font-size: 44px; letter-spacing: -0.03em; font-weight: 600; }
+      table { margin-top: 230px; }
+      table { width: 100%; border-collapse: collapse; background: white; }
+      th, td { text-align: left; padding: 14px 16px; border-bottom: 1px solid #d5e0e4; }
+      th { color: #3d555c; font-weight: 600; font-size: 13px; }
+      .money { font-variant-numeric: tabular-nums; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="word">Harbor</div>
+      <div class="sub">Payout desk</div>
+    </header>
+    <main>
+      <h1><span class="vendor">Mira Chen</span></h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Vendor</th>
+            <th>Payout</th>
+            <th>Status</th>
+            <th>Account</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </main>
+    <script src="payouts.js"></script>
+  </body>
+</html>
